@@ -103,6 +103,68 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
@@ -132,30 +194,25 @@
         </header>
 
         <div class="post-content">
-            <p><strong>简要描述：</strong> </p>
-<ul>
+            <h5 id="简要描述："><a href="#简要描述：" class="headerlink" title="简要描述："></a>简要描述：</h5><ul>
 <li>网易云PC版控件(2.0版本)</li>
 </ul>
-<p><strong>注意事项：</strong> </p>
-<ul>
+<h5 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h5><ul>
 <li>该工具依据软件的快捷键(全局快捷键)实现，故网易云软件的快捷键需要保持默认</li>
 </ul>
-<p><strong>编译命令：</strong></p>
-<ul>
+<h5 id="编译命令："><a href="#编译命令：" class="headerlink" title="编译命令："></a>编译命令：</h5><ul>
 <li><p>pip install -r requirements.txt</p>
 </li>
 <li><p>pyinstaller -Fw MediaCtrl.py</p>
 </li>
 </ul>
-<p><strong>使用方式：</strong> </p>
-<ol>
+<h5 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h5><ol>
 <li><a href="https://github.com/lwq6783293/MediaCtrl/releases" title="releases" target="_blank" rel="noopener">点击下载</a></li>
 <li>解压当前文件至你指定的程序安装位置，如D盘根目录</li>
 <li>双击dist目录下的install.vbs文件后，桌面会生成四个快捷方式</li>
 <li>将快捷方式固定到任务栏中，开始使用吧</li>
 </ol>
-<p><strong>备注：</strong> </p>
-<ul>
+<h5 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h5><ul>
 <li>pre：上一曲</li>
 <li>next：下一曲</li>
 <li>p：播放-暂停</li>
