@@ -7,7 +7,7 @@
 
 
 
-<title>Hello World | 一来二去。</title>
+<title>网易云音乐任务栏控件 | 一来二去。</title>
 
 
 
@@ -103,73 +103,11 @@
             <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">网易云音乐任务栏控件</h1>
             
                 <div class="post-meta">
                     
@@ -178,7 +116,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">August 29, 2019&nbsp;&nbsp;12:57:31</a>
+                        Date: <a href="#">August 29, 2019&nbsp;&nbsp;16:19:49</a>
                         </span>
                     
                     
@@ -187,19 +125,35 @@
         </header>
 
         <div class="post-content">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p><strong>简要描述：</strong> </p>
+<ul>
+<li>网易云PC版控件(2.0版本)</li>
+</ul>
+<p><strong>注意事项：</strong> </p>
+<ul>
+<li>该工具依据软件的快捷键(全局快捷键)实现，故网易云软件的快捷键需要保持默认</li>
+</ul>
+<p><strong>编译命令：</strong></p>
+<ul>
+<li><p>pip install -r requirements.txt</p>
+</li>
+<li><p>pyinstaller -Fw MediaCtrl.py</p>
+</li>
+</ul>
+<p><strong>使用方式：</strong> </p>
+<ol>
+<li><a href="https://github.com/lwq6783293/MediaCtrl/releases" title="releases" target="_blank" rel="noopener">点击下载</a></li>
+<li>解压当前文件至你指定的程序安装位置，如D盘根目录</li>
+<li>双击dist目录下的install.vbs文件后，桌面会生成四个快捷方式</li>
+<li>将快捷方式固定到任务栏中，开始使用吧</li>
+</ol>
+<p><strong>备注：</strong> </p>
+<ul>
+<li>pre：上一曲</li>
+<li>next：下一曲</li>
+<li>p：播放-暂停</li>
+<li>c：显示/隐藏桌面歌词<br><a href="https://github.com/lwq6783293/MediaCtrl/blob/master/img/2.png" target="_blank" rel="noopener"><img src="https://github.com/lwq6783293/MediaCtrl/blob/master/img/2.png" alt></a></li>
+</ul>
 
         </div>
 
@@ -214,7 +168,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://yoursite.com/2019/08/29/hello-world/">http://yoursite.com/2019/08/29/hello-world/</a></span>
+                        <span><a href="http://yoursite.com/2019/08/29/网易云音乐任务栏控件/">http://yoursite.com/2019/08/29/网易云音乐任务栏控件/</a></span>
                     </p>
                 
                 
@@ -237,6 +191,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/小工具/"># 小工具</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -247,8 +205,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2019/08/29/网易云音乐任务栏控件/">网易云音乐任务栏控件</a>
             
+            <a class="next" rel="next" href="/2019/08/29/hello-world/">Hello World</a>
             
         </section>
 
