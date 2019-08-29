@@ -7,7 +7,7 @@
 
 
 
-<title>网易云音乐任务栏控件 | 一来二去。</title>
+<title>Git 设置和取消代理 | 一来二去。</title>
 
 
 
@@ -169,7 +169,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">网易云音乐任务栏控件</h1>
+            <h1 class="post-title">Git 设置和取消代理</h1>
             
                 <div class="post-meta">
                     
@@ -178,14 +178,14 @@
 
                     
                         <span class="post-time">
-                        发布时间: <a href="#">August 29, 2019&nbsp;&nbsp;16:19:49</a>
+                        发布时间: <a href="#">August 29, 2019&nbsp;&nbsp;20:57:56</a>
                         </span>
                     
                     
                         <span class="post-category">
                     分类:
                             
-                                <a href="/categories/Python/">Python</a>
+                                <a href="/categories/Git/">Git</a>
                             
                         </span>
                     
@@ -194,30 +194,39 @@
         </header>
 
         <div class="post-content">
-            <h5 id="简要描述："><a href="#简要描述：" class="headerlink" title="简要描述："></a>简要描述：</h5><ul>
-<li>网易云PC版控件(2.0版本)</li>
+            <h4 id="局部配置："><a href="#局部配置：" class="headerlink" title="局部配置："></a>局部配置：</h4><ul>
+<li>git clone 使用 http.proxy 克隆项目<ul>
+<li>git clone -c http.proxy=<a href="http://127.0.0.1:1080" target="_blank" rel="noopener">http://127.0.0.1:1080</a> <a href="https://github.com/longweiqiang/MediaCtrl.git" target="_blank" rel="noopener">https://github.com/longweiqiang/MediaCtrl.git</a></li>
+<li>git clone -c https.proxy=<a href="http://127.0.0.1:1080" target="_blank" rel="noopener">http://127.0.0.1:1080</a> <a href="https://github.com/longweiqiang/MediaCtrl.git" target="_blank" rel="noopener">https://github.com/longweiqiang/MediaCtrl.git</a></li>
 </ul>
-<h5 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h5><ul>
-<li>该工具依据软件的快捷键(全局快捷键)实现，故网易云软件的快捷键需要保持默认</li>
-</ul>
-<h5 id="编译命令："><a href="#编译命令：" class="headerlink" title="编译命令："></a>编译命令：</h5><ul>
-<li><p>pip install -r requirements.txt</p>
-</li>
-<li><p>pyinstaller -Fw MediaCtrl.py</p>
 </li>
 </ul>
-<h5 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h5><ol>
-<li><a href="https://github.com/longweiqiang/MediaCtrl/releases" title="releases" target="_blank" rel="noopener">点击下载</a></li>
-<li>解压当前文件至你指定的程序安装位置，如D盘根目录</li>
-<li>双击dist目录下的install.vbs文件后，桌面会生成四个快捷方式</li>
-<li>将快捷方式固定到任务栏中，开始使用吧</li>
-</ol>
-<h5 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h5><ul>
-<li>pre：上一曲</li>
-<li>next：下一曲</li>
-<li>p：播放-暂停</li>
-<li>c：显示/隐藏桌面歌词<br><img src="https://raw.githubusercontent.com/longweiqiang/MediaCtrl/master/img/2.png" alt="效果预览" title="效果预览"></li>
+<h5 id="全局配置："><a href="#全局配置：" class="headerlink" title="全局配置："></a>全局配置：</h5><ul>
+<li>全局配置Git<ul>
+<li>git config –global https.proxy <a href="http://127.0.0.1:1080" target="_blank" rel="noopener">http://127.0.0.1:1080</a></li>
+<li>git config –global https.proxy <a href="https://127.0.0.1:1080" target="_blank" rel="noopener">https://127.0.0.1:1080</a>    </li>
 </ul>
+</li>
+<li>取消代理<ul>
+<li>git config –global –unset http.proxy</li>
+<li>git config –global –unset https.proxy    </li>
+</ul>
+</li>
+</ul>
+<h5 id="针对GitHub："><a href="#针对GitHub：" class="headerlink" title="针对GitHub："></a>针对GitHub：</h5><ul>
+<li>只对github.com<ul>
+<li>git config –global http.<a href="https://github.com.proxy" target="_blank" rel="noopener">https://github.com.proxy</a> <a href="http://127.0.0.1:1080" target="_blank" rel="noopener">http://127.0.0.1:1080</a></li>
+<li>git config –global http.<a href="https://github.com.proxy" target="_blank" rel="noopener">https://github.com.proxy</a> <a href="https://127.0.0.1:1080" target="_blank" rel="noopener">https://127.0.0.1:1080</a>    </li>
+</ul>
+</li>
+<li>取消代理<ul>
+<li>git config –global –unset http.<a href="https://github.com.proxy" target="_blank" rel="noopener">https://github.com.proxy</a>)    </li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><a href="http://www.afox.cc/archives/404" target="_blank" rel="noopener">http://www.afox.cc/archives/404</a><br><a href="https://gist.github.com/laispace/666dd7b27e9116faece6" target="_blank" rel="noopener">https://gist.github.com/laispace/666dd7b27e9116faece6</a></p>
+</blockquote>
 
         </div>
 
@@ -232,7 +241,7 @@
                 <!-- 
                     <p class="copyright-item">
                         <span>文章链接:</span>
-                        <span><a href="http://yoursite.com/2019/08/29/网易云音乐任务栏控件/">http://yoursite.com/2019/08/29/网易云音乐任务栏控件/</a></span>
+                        <span><a href="http://yoursite.com/2019/08/29/Git-设置和取消代理/">http://yoursite.com/2019/08/29/Git-设置和取消代理/</a></span>
                     </p>
                  -->
                 <!--
@@ -258,7 +267,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/小工具/"># 小工具</a>
+                        <a href="/tags/技巧/"># 技巧</a>
                     
                         
                 </span>
@@ -271,10 +280,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2019/08/29/Git-设置和取消代理/">Git 设置和取消代理</a>
             
-            
-            <a class="next" rel="next" href="/2019/08/29/hello-world/">Hello World</a>
+            <a class="next" rel="next" href="/2019/08/29/网易云音乐任务栏控件/">网易云音乐任务栏控件</a>
             
         </section>
 
